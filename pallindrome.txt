@@ -1,0 +1,55 @@
+
+//Name : Dinesh Pawar
+
+
+package param;
+
+import java.util.Scanner;
+
+
+
+public class Demo3 {
+	
+	public void myLogic(int no)
+	{
+		int digit=0,irev=0,sum=0,mul=1;
+		int temp=no;
+		while(temp!=0)
+		{
+			digit=temp%10;
+			
+			irev=irev*10+digit;
+			sum=sum+digit;
+			mul=mul+digit;
+			temp=temp/10;
+			
+			
+		}
+		
+		if(irev==no)
+		{
+			System.out.println("no is pallindrome"+sum);
+			
+		}
+		else{
+			
+			System.out.println("no is not pallindrome"+mul);
+		}
+		
+		
+		
+	}
+
+	public static void main(String args[])
+	{
+		System.out.println("inside main");
+		
+		Demo3 obj=new Demo3();
+		obj.myLogic(151);
+		
+		
+	}	
+	
+	
+}
+
